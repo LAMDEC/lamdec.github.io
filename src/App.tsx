@@ -3,8 +3,15 @@
 import "@mantine/core/styles.css";
 
 import { MantineProvider } from "@mantine/core";
+import { Hero } from "./Hero";
+import { Header } from "./Header";
 
 export default function App() {
-  return <MantineProvider></MantineProvider>;
+  return (
+    <MantineProvider>
+      <Header />
+      <Hero />
+    </MantineProvider>
+  );
 }
 
