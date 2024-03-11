@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/montserrat": "^5.0.18",
+    "@fontsource-variable/oswald": "^5.0.19",
     "@mantine/core": "^7.6.1",
     "@mantine/hooks": "^7.6.1",
     "react": "^18.2.0",

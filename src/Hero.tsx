@@ -9,16 +9,17 @@ export function Hero() {
     <Flex h="94vh">
       <Box
         w="65%"
-        bg="dark.5"
+        bg="dark.6"
         c="gray.2"
-        style={{ fontFamily: "sans-serif", fontSize: "4rem" }}
+        style={{
+          fontSize: "4rem",
+        }}
       >
         <Flex h="100%" direction="column" justify="center">
           <Box
             ta="center"
             style={{
-              fontWeight: 800,
-              textTransform: "uppercase",
+              fontWeight: 700,
               letterSpacing: "0.3rem",
               lineHeight: "7rem",
             }}

@@ -2,15 +2,24 @@
 // All packages except `@mantine/hooks` require styles imports
 import "@mantine/core/styles.css";
 
-import { MantineProvider } from "@mantine/core";
+import { Box, MantineProvider } from "@mantine/core";
 import { Hero } from "./Hero";
 import { Header } from "./Header";
+import { About } from "./About";
+import { Content } from "./Content";
+import { Posts } from "./Posts";
 
 export default function App() {
   return (
     <MantineProvider>
-      <Header />
-      <Hero />
+      <Box ff="Montserrat Variable, sans-serif">
+        <Header />
+        <Hero />
+        <Content>
+          <About />
+          <Posts />
+        </Content>
+      </Box>
     </MantineProvider>
   );
 }

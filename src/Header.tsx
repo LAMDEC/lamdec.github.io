@@ -4,15 +4,16 @@ export function Header() {
   return (
     <Flex
       c="white"
-      bg="dark.6"
+      bg="dark.7"
       h="6vh"
       justify="space-between"
       px="6rem"
       py="sm"
       align="center"
-      ff="mono"
     >
-      <Box fz="xl">LAMDEC</Box>
+      <Box fz="xl" lts="0.2rem">
+        LAMDEC
+      </Box>
       <Flex fz="lg" gap="xl" c="gray.3">
         <Box>Equipe</Box>
         <Box>Projetos</Box>
