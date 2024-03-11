@@ -1,0 +1,32 @@
+#linha1 {
+  animation: fadein 1s;
+}
+
+#linha2 {
+  animation: fadein 2s;
+}
+
+#linha3 {
+  animation: fadein 3s;
+}
+
+#logo {
+  animation: fadeinup 2s;
+}
+
+#buttons {
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeinup {
+  from {
+    translate: 0 2rem;
+    opacity: 0;
+  }
+}

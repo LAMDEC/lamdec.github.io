@@ -1,10 +1,12 @@
 import { Box, Button, Flex, Image } from "@mantine/core";
 import lamdec from "../public/lamdec.png";
+import ufrj from "../public/ufrj-negativo.png";
 import { MdOutlineArrowDownward } from "react-icons/md";
+import "./Hero.css";
 
 export function Hero() {
   return (
-    <Flex h="95vh">
+    <Flex h="94vh">
       <Box
         w="65%"
         bg="dark.5"
@@ -21,11 +23,11 @@ export function Hero() {
               lineHeight: "7rem",
             }}
           >
-            <Box>Laboratório de Métodos</Box>
-            <Box>de Suporte à</Box>
-            <Box>Tomada de Decisão</Box>
+            <Box id="linha1">Laboratório de Métodos</Box>
+            <Box id="linha2">de Suporte à</Box>
+            <Box id="linha3">Tomada de Decisão</Box>
           </Box>
-          <Flex justify="center" mt="6rem" gap="xl">
+          <Flex id="buttons" justify="center" mt="6rem" gap="4rem">
             <Button size="xl" rightSection={<MdOutlineArrowDownward />}>
               Projetos
             </Button>
@@ -36,8 +38,9 @@ export function Hero() {
         </Flex>
       </Box>
       <Box w="35%" bg="dark.9">
-        <Flex h="80%" direction="column" justify="center" px="xl">
-          <Image src={lamdec} />
+        <Flex h="100%" direction="column" justify="center" px="xl">
+          <Image id="logo" src={lamdec} />
+          <Image id="logo" src={ufrj} />
         </Flex>
       </Box>
     </Flex>
