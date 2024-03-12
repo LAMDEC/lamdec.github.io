@@ -1,10 +1,26 @@
-import { Box, Flex } from "@mantine/core";
+import { Anchor, Box, Button, Flex, Group } from "@mantine/core";
+import { ColorSchemeToggle } from "./ColorSchemeToggle";
+
+const links = [
+  { link: "/equipe", label: "Equipe" },
+  { link: "/projetos", label: "Projetos" },
+  { link: "/artigos", label: "Artigos" },
+  { link: "/sobre", label: "Sobre" },
+];
 
 export function Header() {
+  const headerItems = links.map((link) => (
+    <Anchor href={link.link}>
+      <Button variant="subtle" color="gray" radius="md">
+        {link.label}
+      </Button>
+    </Anchor>
+  ));
+
   return (
     <Flex
-      c="white"
-      bg="dark.7"
+      // c="white"
+      // bg="dark.7"
       h="6vh"
       justify="space-between"
       px="6rem"
@@ -14,13 +30,12 @@ export function Header() {
       <Box fz="xl" lts="0.2rem">
         LAMDEC
       </Box>
-      <Flex fz="lg" gap="xl" c="gray.3">
-        <Box>Equipe</Box>
-        <Box>Projetos</Box>
-        <Box>Artigos</Box>
-        <Box>Sobre</Box>
-      </Flex>
-      <Box>Modo escuro</Box>
+      <nav>
+        <Group>
+          {headerItems}
+        </Group>
+      </nav>
+      <ColorSchemeToggle />
     </Flex>
   );
 }

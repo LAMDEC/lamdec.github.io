@@ -9,8 +9,8 @@ export function Hero() {
     <Flex h="94vh">
       <Box
         w="65%"
-        bg="dark.6"
-        c="gray.2"
+        // bg="dark.6"
+        // c="gray.2"
         style={{
           fontSize: "4rem",
         }}
@@ -38,7 +38,9 @@ export function Hero() {
           </Flex>
         </Flex>
       </Box>
-      <Box w="35%" bg="dark.9">
+      <Box w="35%" 
+      // bg="dark.9"
+      >
         <Flex h="100%" direction="column" justify="center" px="xl">
           <Image id="logo" src={lamdec} />
           <Image id="logo" src={ufrj} />
