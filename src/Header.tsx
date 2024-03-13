@@ -21,19 +21,16 @@ export function Header() {
     <Flex
       // c="white"
       // bg="dark.7"
-      h="6vh"
+      h="8vh"
       justify="space-between"
       px="6rem"
-      py="sm"
       align="center"
     >
       <Box fz="xl" lts="0.2rem">
         LAMDEC
       </Box>
       <nav>
-        <Group>
-          {headerItems}
-        </Group>
+        <Group>{headerItems}</Group>
       </nav>
       <ColorSchemeToggle />
     </Flex>
