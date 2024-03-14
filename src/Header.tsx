@@ -1,4 +1,4 @@
-import { Anchor, Box, Button, Flex, Group } from "@mantine/core";
+import { Anchor, Box, Button, Divider, Flex, Group, Stack } from "@mantine/core";
 import { ColorSchemeToggle } from "./ColorSchemeToggle";
 
 const links = [
@@ -18,6 +18,7 @@ export function Header() {
   ));
 
   return (
+    <Stack gap={0}>
     <Flex
       // c="white"
       // bg="dark.7"
@@ -25,7 +26,7 @@ export function Header() {
       justify="space-between"
       px="6rem"
       align="center"
-    >
+      >
       <Box fz="xl" lts="0.2rem">
         LAMDEC
       </Box>
@@ -34,5 +35,8 @@ export function Header() {
       </nav>
       <ColorSchemeToggle />
     </Flex>
+    <Divider/>
+      </Stack>
+    
   );
 }
