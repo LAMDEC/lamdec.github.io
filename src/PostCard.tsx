@@ -24,15 +24,14 @@ export function PostCard({
   description,
   link,
 }: PostCardProps) {
-
-  const renderTags = tags.map((tag) => (
-    <Badge color={tag[1]} variant="light">
+  const renderTags = tags.map((tag, i) => (
+    <Badge key={i} color={tag[1]} variant="light">
       {tag[0]}
     </Badge>
   ));
 
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder>
+    <Card shadow="xs" padding="lg" radius="md" withBorder>
       <Card.Section>
         <Image
           src={
@@ -46,7 +45,9 @@ export function PostCard({
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={600} size="xl">{title}</Text>
+        <Text fw={600} size="xl">
+          {title}
+        </Text>
         <Group>{renderTags}</Group>
       </Group>
 

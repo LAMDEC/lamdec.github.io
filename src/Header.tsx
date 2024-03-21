@@ -1,5 +1,6 @@
-import { Anchor, Box, Button, Divider, Flex, Group, Stack } from "@mantine/core";
+import { Anchor, Button, Divider, Flex, Group, Stack } from "@mantine/core";
 import { ColorSchemeToggle } from "./ColorSchemeToggle";
+import { Link, Outlet } from "@tanstack/react-router";
 
 const links = [
   { link: "/equipe", label: "Equipe" },
@@ -9,34 +10,31 @@ const links = [
 ];
 
 export function Header() {
-  const headerItems = links.map((link) => (
-    <Anchor href={link.link}>
+  const headerItems = links.map((link, i) => (
+    <Link key={i} to={link.link}>
       <Button variant="subtle" color="gray" radius="md">
         {link.label}
       </Button>
-    </Anchor>
+    </Link>
   ));
 
   return (
-    <Stack gap={0}>
-    <Flex
-      // c="white"
-      // bg="dark.7"
-      h="8vh"
-      justify="space-between"
-      px="6rem"
-      align="center"
-      >
-      <Box fz="xl" lts="0.2rem">
-        LAMDEC
-      </Box>
-      <nav>
-        <Group>{headerItems}</Group>
-      </nav>
-      <ColorSchemeToggle />
-    </Flex>
-    <Divider/>
+    <>
+      <Stack w="100dvw" gap={0}>
+        <Flex h="8vh" justify="space-between" px="6rem" align="center">
+          <Link to="/">
+            <Button variant="transparent" color="gray" fz="xl" lts="0.2rem">
+              LAMDEC
+            </Button>
+          </Link>
+          <nav>
+            <Group>{headerItems}</Group>
+          </nav>
+          <ColorSchemeToggle />
+        </Flex>
+        <Divider />
       </Stack>
-    
+      <Outlet />
+    </>
   );
 }

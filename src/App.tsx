@@ -3,22 +3,23 @@
 import "@mantine/core/styles.css";
 
 import { Box, MantineProvider } from "@mantine/core";
-import { Hero } from "./Hero";
-import { Header } from "./Header";
-import { About } from "./About";
-import { Content } from "./Content";
-import { Posts } from "./Posts";
+import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { routeTree } from "./routeTree.gen";
+
+const router = createRouter({ routeTree });
+
+// Register the router instance for type safety
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
+}
 
 export default function App() {
   return (
     <MantineProvider>
-      <Box ff="Montserrat Variable, sans-serif">
-        <Header />
-        <Hero />
-        <Content>
-          <About />
-          <Posts />
-        </Content>
+      <Box ff="Montserrat Variable, sans-serif" style={{ overflowX: "hidden" }}>
+        <RouterProvider router={router} />
       </Box>
     </MantineProvider>
   );
