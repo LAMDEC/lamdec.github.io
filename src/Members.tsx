@@ -18,9 +18,9 @@ export function Members() {
             ]}
             page={"https://www.im.ufrj.br/ralph"}
             institution={"Universidade Federal do Rio de Janeiro"}
-            lattes={"xxxxx"}
-            ORCID={"xxxxxx"}
-            linkedin={"xxxxxx"}
+            lattes={"http://lattes.cnpq.br/1513109865941797"}
+            ORCID={"https://orcid.org/0000-0002-4311-6762 "}
+            linkedin={"https://www.linkedin.com/in/ralph-silva-a82929297/"}
             github={"https://github.com/ralphssilva"}
           />
         ))}
