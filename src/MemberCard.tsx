@@ -16,7 +16,6 @@ import {
 import { FaGithub, FaOrcid, FaLinkedin } from "react-icons/fa";
 import { MdPerson } from "react-icons/md";
 
-
 interface MemberCardProps {
   image?: string;
   name: string;
@@ -99,10 +98,10 @@ export function MemberCard({
             <MdPerson size={"lg"} />
           </ActionIcon>
         )}
-                {linkedin && (
+        {linkedin && (
           <ActionIcon
             component="a"
-            href={page}
+            href={linkedin}
             target="_blank"
             variant="transparent"
             aria-label="Pagina pessoal"
