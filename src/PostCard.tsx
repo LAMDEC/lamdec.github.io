@@ -4,13 +4,12 @@ import {
   Image,
   Group,
   Badge,
-  Button,
-  Anchor,
   MantineColor,
   Box,
   Flex,
   useMantineColorScheme,
 } from "@mantine/core";
+import { Link } from "@tanstack/react-router";
 
 interface PostCardProps {
   image?: string;
@@ -20,13 +19,7 @@ interface PostCardProps {
   link: string;
 }
 
-export function PostCard({
-  image,
-  title,
-  tags,
-  description,
-  link,
-}: PostCardProps) {
+export function PostCard({ image, title, tags, link }: PostCardProps) {
   const { colorScheme } = useMantineColorScheme();
 
   const renderTags = tags.map((tag, i) => (
@@ -38,26 +31,27 @@ export function PostCard({
   return (
     <Card shadow="xs" padding="lg" radius="sm" withBorder h="28rem">
       <Card.Section>
-        <Image
-          src={
-            image
-              ? image
-              : "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
-          height={280}
-          alt="Description image"
-        />
+        <Link to={link}>
+          <Image
+            src={
+              image
+                ? image
+                : "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+            height={300}
+            alt="Description image"
+          />
+        </Link>
       </Card.Section>
       <Flex mt="md" justify="space-between">
-        <Text fz="sm">19/03/2024</Text>
         <Group>{renderTags}</Group>
+        <Text fz="sm">19/03/2024</Text>
       </Flex>
-      <Box mt="sm">
+      <Box mt="md">
         <Text size="xl" c={colorScheme === "dark" ? "white" : "black"}>
           {title}
         </Text>
       </Box>
-      {/* <Text size="sm">{description}</Text> */}
     </Card>
   );
 }

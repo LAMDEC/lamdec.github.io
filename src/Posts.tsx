@@ -25,7 +25,7 @@ export function Posts() {
       </Box>
       <Divider mt="xs" mb="lg" />
       <SimpleGrid cols={3}>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((val) => (
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((val, i) => (
           <PostCard
             key={val}
             title={`Efeitos da parabiose em pacientes consternados`}
@@ -36,7 +36,7 @@ export function Posts() {
             description={
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut tellus eget erat pulvinar efficitur. Fusce non gravida diam. Vestibulum."
             }
-            link={"/"}
+            link={`/posts/${i}`}
           />
         ))}
       </SimpleGrid>

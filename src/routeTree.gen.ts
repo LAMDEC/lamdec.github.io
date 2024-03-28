@@ -18,6 +18,7 @@ import { Route as rootRoute } from './routes/__root'
 
 const EquipeLazyImport = createFileRoute('/Equipe')()
 const IndexLazyImport = createFileRoute('/')()
+const PostsPostIdLazyImport = createFileRoute('/posts/$postId')()
 
 // Create/Update Routes
 
@@ -31,6 +32,11 @@ const IndexLazyRoute = IndexLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
 
+const PostsPostIdLazyRoute = PostsPostIdLazyImport.update({
+  path: '/posts/$postId',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/posts.$postId.lazy').then((d) => d.Route))
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -43,6 +49,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EquipeLazyImport
       parentRoute: typeof rootRoute
     }
+    '/posts/$postId': {
+      preLoaderRoute: typeof PostsPostIdLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -51,6 +61,7 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren([
   IndexLazyRoute,
   EquipeLazyRoute,
+  PostsPostIdLazyRoute,
 ])
 
 /* prettier-ignore-end */
