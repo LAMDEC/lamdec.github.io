@@ -28,10 +28,10 @@ export function Posts() {
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((val) => (
           <PostCard
             key={val}
-            title={`Projeto ${val}`}
+            title={`Efeitos da parabiose em pacientes consternados`}
             tags={[
-              ["IA", "red"],
-              ["Estatística", "blue"],
+              ["Artigo", "green"],
+              // ["Estatística", "blue"],
             ]}
             description={
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut tellus eget erat pulvinar efficitur. Fusce non gravida diam. Vestibulum."
