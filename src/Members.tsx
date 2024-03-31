@@ -1,27 +1,24 @@
 import { Box, Divider, SimpleGrid, useMantineColorScheme } from "@mantine/core";
 import { MemberCard } from "./MemberCard";
 import { Content } from "./Content";
+import { membros }  from "../public/membros"
 
 export function Members() {
   return (
     <Content>
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing={"xl"}>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((val) => (
+        {membros.sort((membro1, membro2)=>membro1.name.localeCompare(membro2.name)).map((membro, val) => (
           <MemberCard
             key={val}
-            image={"https://avatars.githubusercontent.com/u/138714255?v=4"}
-            name={"Ralph Silva"}
-            description={[
-              "Professor Associado",
-              "Departamento de Métodos Estatísticos",
-              "Instituto de Matemática",
-            ]}
-            page={"https://www.im.ufrj.br/ralph"}
-            institution={"Universidade Federal do Rio de Janeiro"}
-            lattes={"http://lattes.cnpq.br/1513109865941797"}
-            ORCID={"https://orcid.org/0000-0002-4311-6762 "}
-            linkedin={"https://www.linkedin.com/in/ralph-silva-a82929297/"}
-            github={"https://github.com/ralphssilva"}
+            image={membro.image}
+            name={membro.name}
+            description={membro.description}
+            page={membro.page}
+            institution={membro.institution}
+            lattes={membro.lattes}
+            ORCID={membro.ORCID}
+            linkedin={membro.linkedin}
+            github={membro.github}
           />
         ))}
       </SimpleGrid>
