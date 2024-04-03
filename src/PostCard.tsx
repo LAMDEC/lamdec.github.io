@@ -15,16 +15,17 @@ interface PostCardProps {
   image?: string;
   title: string;
   tags: Array<[string, MantineColor]>;
-  description: string;
+  //description: string;
   link: string;
+  date: string;
 }
 
-export function PostCard({ image, title, tags, link }: PostCardProps) {
+export function PostCard({ image, title, tags, link, date }: PostCardProps) {
   const { colorScheme } = useMantineColorScheme();
 
   const renderTags = tags.map((tag, i) => (
-    <Badge key={i} color={tag[1]} radius="sm" variant="light">
-      {tag[0]}
+    <Badge key={i} radius="sm" variant="light">
+      {tag}
     </Badge>
   ));
 
@@ -45,7 +46,7 @@ export function PostCard({ image, title, tags, link }: PostCardProps) {
       </Card.Section>
       <Flex mt="md" justify="space-between">
         <Group>{renderTags}</Group>
-        <Text fz="sm">19/03/2024</Text>
+        <Text fz="sm">{date}</Text>
       </Flex>
       <Box mt="md">
         <Text size="xl" c={colorScheme === "dark" ? "white" : "black"}>

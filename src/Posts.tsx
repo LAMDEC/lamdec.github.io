@@ -1,5 +1,16 @@
 import { Box, Divider, SimpleGrid, useMantineColorScheme } from "@mantine/core";
 import { PostCard } from "./PostCard";
+import Markdown from "react-markdown";
+import { parse } from "yaml";
+import remarkFrontmatter from "remark-frontmatter";
+
+function getFrontmatter(markdown: string) {
+  const frontmatter = parse(markdown.substring(5, markdown.indexOf("---", 4)));
+  // if (frontmatter.date) {
+  //   frontmatter.date = new Date(frontmatter.date);
+  // }
+  return frontmatter;
+}
 
 export function Posts() {
   const { colorScheme } = useMantineColorScheme();
@@ -11,7 +22,9 @@ export function Posts() {
   });
 
   const posts = Object.values(postsImport);
-  console.log(posts);
+
+  const metadata = posts.map(getFrontmatter);
+  console.log(metadata);
 
   return (
     <Box>
@@ -25,18 +38,14 @@ export function Posts() {
       </Box>
       <Divider mt="xs" mb="lg" />
       <SimpleGrid cols={3}>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((val, i) => (
+        {metadata.map(({ title, date, image, tags }, i) => (
           <PostCard
-            key={val}
-            title={`Efeitos da parabiose em pacientes consternados`}
-            tags={[
-              ["Artigo", "green"],
-              // ["Estatística", "blue"],
-            ]}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut tellus eget erat pulvinar efficitur. Fusce non gravida diam. Vestibulum."
-            }
-            link={`/posts/${i}`}
+            key={i}
+            title={title}
+            date={date}
+            image={image}
+            tags={tags}
+            link={"/posts/" + title}
           />
         ))}
       </SimpleGrid>
