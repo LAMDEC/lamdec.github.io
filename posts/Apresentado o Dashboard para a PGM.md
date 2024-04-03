@@ -1,5 +1,4 @@
 ---
-title: Apresentado o Dashboard para a PGM
 image: ../posts_imgs/dash.png
 date: 2024-04-02
 tags: [Projeto, Inteligência Artificial]

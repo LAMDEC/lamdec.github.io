@@ -3,6 +3,8 @@ import { PostCard } from "./PostCard";
 import Markdown from "react-markdown";
 import { parse } from "yaml";
 import remarkFrontmatter from "remark-frontmatter";
+import { MetadataContext } from "./PostsContext";
+import { useContext } from "react";
 
 function getFrontmatter(markdown: string) {
   const frontmatter = parse(markdown.substring(5, markdown.indexOf("---", 4)));
@@ -15,16 +17,7 @@ function getFrontmatter(markdown: string) {
 export function Posts() {
   const { colorScheme } = useMantineColorScheme();
 
-  const postsImport = import.meta.glob("../posts/*.md", {
-    query: "?raw",
-    import: "default",
-    eager: true,
-  });
-
-  const posts = Object.values(postsImport);
-
-  const metadata = posts.map(getFrontmatter);
-  console.log(metadata);
+  const metadata = useContext(MetadataContext);
 
   return (
     <Box>
