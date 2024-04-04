@@ -69,9 +69,12 @@ export function Header() {
       >
         <Stack h={`calc(100vh - ${rem(80)})`} mx="-md" gap={rem(50)}>
           <Divider my={0} />
-          
+          <Link key={"home"} to={"/"} onClick={closeDrawer}>
+            <Button variant="subtle" color="gray" radius="md" w={"100%"}>
+              Home
+            </Button>
+          </Link>
           {headerItems}
-          
         </Stack>
       </Drawer>
     </>
