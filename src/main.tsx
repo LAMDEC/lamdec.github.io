@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/oswald";
+import "@fontsource-variable/lora";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
