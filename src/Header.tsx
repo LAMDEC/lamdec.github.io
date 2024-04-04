@@ -1,4 +1,16 @@
-import { AppShell, AppShellAside, Burger, Button, Divider, Flex, Group, Stack } from "@mantine/core";
+import {
+  Burger,
+  Button,
+  Divider,
+  Flex,
+  Group,
+  Stack,
+  Drawer,
+  ScrollArea,
+  UnstyledButton,
+  Center,
+  rem,
+} from "@mantine/core";
 import { ColorSchemeToggle } from "./ColorSchemeToggle";
 import { Link, Outlet } from "@tanstack/react-router";
 import { useDisclosure } from "@mantine/hooks";
@@ -11,10 +23,11 @@ const links = [
 ];
 
 export function Header() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle: toggleDrawer, close: closeDrawer }] =
+    useDisclosure(false);
   const headerItems = links.map((link, i) => (
-    <Link key={i} to={link.link}>
-      <Button variant="subtle" color="gray" radius="md">
+    <Link key={i} to={link.link} onClick={closeDrawer}>
+      <Button variant="subtle" color="gray" radius="md" w={"100%"}>
         {link.label}
       </Button>
     </Link>
@@ -23,27 +36,44 @@ export function Header() {
   return (
     <>
       <Stack w="100dvw" gap={0}>
-        <Flex h="8vh" justify="space-between" px="xl" align="center">
-        <Burger
-                opened={opened}
-                onClick={toggle}
-                hiddenFrom="xs"
-                size="sm"
-              />
-          <Link to="/">
-            <Button variant="transparent" color="gray" fz="xl" lts="0.2rem">
-              LAMDEC
-            </Button>
-          </Link>
+        <header>
+          <Flex h="8vh" justify="space-between" px="xl" align="center">
+            <Burger
+              opened={opened}
+              onClick={toggleDrawer}
+              hiddenFrom="xs"
+              size="sm"
+            />
+            <Link to="/">
+              <Button variant="transparent" color="gray" fz="xl" lts="0.2rem">
+                LAMDEC
+              </Button>
+            </Link>
             <Group visibleFrom="xs" wrap="nowrap" gap={0}>
               {headerItems}
             </Group>
-          <ColorSchemeToggle />
-
-        </Flex>
+            <ColorSchemeToggle />
+          </Flex>
+        </header>
         <Divider />
       </Stack>
       <Outlet />
+      <Drawer
+        opened={opened}
+        onClose={closeDrawer}
+        size="100%"
+        padding="md"
+        title="Navegação"
+        hiddenFrom="sm"
+        zIndex={1000000}
+      >
+        <Stack h={`calc(100vh - ${rem(80)})`} mx="-md" gap={rem(50)}>
+          <Divider my={0} />
+          
+          {headerItems}
+          
+        </Stack>
+      </Drawer>
     </>
   );
 }
