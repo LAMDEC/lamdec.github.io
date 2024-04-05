@@ -12,7 +12,7 @@ import {
   rem,
 } from "@mantine/core";
 import { ColorSchemeToggle } from "./ColorSchemeToggle";
-import { Link, Outlet } from "@tanstack/react-router";
+import { Link, Outlet, ScrollRestoration } from "@tanstack/react-router";
 import { useDisclosure } from "@mantine/hooks";
 
 const links = [
@@ -57,6 +57,7 @@ export function Header() {
         </header>
         <Divider />
       </Stack>
+      <ScrollRestoration />
       <Outlet />
       <Drawer
         opened={opened}

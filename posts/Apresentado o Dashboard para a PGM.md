@@ -12,7 +12,7 @@ Integer sollicitudin arcu nisi, in **vestibulum** felis varius ut. Maecenas urna
 
 ## Equações
 
-Uma equação não inline no katex $\int \frac{1}{1+x^2}\ dx$ fica dessa forma.
+Uma equação inline no katex $\int \frac{1}{1+x^2}\ dx$ fica dessa forma.
 
 Equações display:
 

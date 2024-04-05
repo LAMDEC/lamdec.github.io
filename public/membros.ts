@@ -19,10 +19,7 @@ export const membros: MemberCardProps[] = [
   {
     name: "Marcus L. Nascimento",
     image: "https://avatars.githubusercontent.com/u/77112876?v=4",
-    description: [
-      "Pesquisador",
-      "Departamento de Pesquisa",
-    ],
+    description: ["Pesquisador", "Departamento de Pesquisa"],
     institution: "Fundação José Luiz Egydio Setúbal",
     lattes: "https://lattes.cnpq.br/5803567335277582",
     ORCID: "https://orcid.org/0000-0002-9742-5683",
@@ -30,10 +27,9 @@ export const membros: MemberCardProps[] = [
   },
   {
     name: "Paulo Silva Filho",
-    image: "http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4766525H3",
-    description: [
-      "Graduando em Matematica Aplicada",
-    ],
+    image:
+      "http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4766525H3",
+    description: ["Graduando em Matematica Aplicada"],
     institution: "Universidade Federal do Rio de Janeiro",
     lattes: "http://lattes.cnpq.br/1370344932631721",
     linkedin: "https://www.linkedin.com/in/paulo-silva-filho-9584852a",
@@ -42,13 +38,19 @@ export const membros: MemberCardProps[] = [
   {
     name: "Heudson Tosta Mirandola",
     image: "https://avatars.githubusercontent.com/u/20370158?v=4",
-    description: [
-      "Professor Associado",
-      "Departamento de Matemática"
-    ],
+    description: ["Professor Associado", "Departamento de Matemática"],
     institution: "Universidade Federal do Rio de Janeiro",
     lattes: "http://lattes.cnpq.br/3030808069800164",
-    github: "https://github.com/mirandola"
+    github: "https://github.com/mirandola",
   },
-
+  {
+    name: "Matheus Vargas",
+    image:
+      "https://media.licdn.com/dms/image/D4D03AQFZDR4IwxTUOQ/profile-displayphoto-shrink_800_800/0/1712335929671?e=1717632000&v=beta&t=xTmQf1hQnwqjmnUTzwPvGQUXBerJUVlpIoBNmSjW4lo",
+    description: ["Graduando em Ciência da Computação"],
+    institution: "Universidade Federal do Rio de Janeiro",
+    lattes: "https://lattes.cnpq.br/4974056898006345",
+    github: "https://github.com/theuvargas",
+    linkedin: "https://www.linkedin.com/in/theu-vargas/",
+  },
 ];
