@@ -4,7 +4,6 @@ import {
   Image,
   Group,
   Badge,
-  MantineColor,
   Box,
   Flex,
   useMantineColorScheme,
@@ -14,8 +13,7 @@ import { Link } from "@tanstack/react-router";
 interface PostCardProps {
   image?: string;
   title: string;
-  tags: Array<[string, MantineColor]>;
-  //description: string;
+  tags: string[];
   link: string;
   date: string;
 }

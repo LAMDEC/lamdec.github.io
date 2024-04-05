@@ -1,18 +1,7 @@
 import { Box, Divider, SimpleGrid, useMantineColorScheme } from "@mantine/core";
 import { PostCard } from "./PostCard";
-import Markdown from "react-markdown";
-import { parse } from "yaml";
-import remarkFrontmatter from "remark-frontmatter";
 import { MetadataContext } from "./PostsContext";
 import { useContext } from "react";
-
-function getFrontmatter(markdown: string) {
-  const frontmatter = parse(markdown.substring(5, markdown.indexOf("---", 4)));
-  // if (frontmatter.date) {
-  //   frontmatter.date = new Date(frontmatter.date);
-  // }
-  return frontmatter;
-}
 
 export function Posts() {
   const { colorScheme } = useMantineColorScheme();

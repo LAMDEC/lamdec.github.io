@@ -19,6 +19,7 @@ export function Post() {
     <Flex justify="center">
       <Box maw="60rem" w="100%" px="sm" py="xl">
         <Markdown
+          className="markdown"
           remarkPlugins={[remarkFrontmatter, remarkMath, remarkGfm]}
           rehypePlugins={[rehypeKatex]}
         >

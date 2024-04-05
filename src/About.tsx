@@ -1,4 +1,4 @@
-import { Box, Divider, useMantineColorScheme } from "@mantine/core";
+import { Box, Divider, useMantineColorScheme, Text } from "@mantine/core";
 
 export function About() {
   const { colorScheme } = useMantineColorScheme();
@@ -16,7 +16,7 @@ export function About() {
         mb="lg"
         // color="gray.6"
       />
-      <Box
+      <Text
         // c="gray.3"
         fz="1.5rem"
         lh="lg"
@@ -27,7 +27,7 @@ export function About() {
         Voluptatum iure facilis sit, natus, debitis reprehenderit aliquid
         dolorum sapiente minus laboriosam consequuntur! Cumque doloremque, eaque
         nobis cupiditate nam a delectus eos laboriosam!
-      </Box>
+      </Text>
     </Box>
   );
 }
