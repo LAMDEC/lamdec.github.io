@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, useMantineColorScheme } from "@mantine/core";
+import { Box, Button, Flex, Image, rem, useMantineColorScheme } from "@mantine/core";
 import lamdec from "../public/lamdec.png";
 import ufrj_dark from "../public/ufrj-negativo.png";
 import ufrj_light from "/ufrj.png";
@@ -51,6 +51,7 @@ export function Hero() {
           align="center"
           justify="center"
           px="xl"
+          mt={rem(60)}
         >
           <Image w="90%" id="logo" src={lamdec} />
           <Image

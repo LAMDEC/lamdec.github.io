@@ -8,6 +8,7 @@ import "./Post.css";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import { Content } from "./Content";
 
 export function Post() {
   const { postId } = Route.useParams();
@@ -16,16 +17,18 @@ export function Post() {
   const content = posts[`../posts/${postId}.md`];
 
   return (
-    <Flex justify="center">
-      <Box maw="60rem" w="100%" px="sm" py="xl">
-        <Markdown
-          className="markdown"
-          remarkPlugins={[remarkFrontmatter, remarkMath, remarkGfm]}
-          rehypePlugins={[rehypeKatex]}
-        >
-          {content}
-        </Markdown>
-      </Box>
-    </Flex>
+    <Content>
+      <Flex justify="center">
+        <Box maw="60rem" w="100%" px="sm" py="xl">
+          <Markdown
+            className="markdown"
+            remarkPlugins={[remarkFrontmatter, remarkMath, remarkGfm]}
+            rehypePlugins={[rehypeKatex]}
+          >
+            {content}
+          </Markdown>
+        </Box>
+      </Flex>
+    </Content>
   );
 }

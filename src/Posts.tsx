@@ -19,7 +19,7 @@ export function Posts() {
         ÚLTIMAS ATUALIZAÇÕES
       </Box>
       <Divider mt="xs" mb="lg" />
-      <SimpleGrid cols={3}>
+      <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}>
         {metadata.map(({ title, date, image, tags }, i) => (
           <PostCard
             key={i}

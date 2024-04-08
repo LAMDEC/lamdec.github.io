@@ -1,17 +1,11 @@
 import {
   Card,
   Text,
-  Image,
   Group,
-  Badge,
-  Button,
-  Anchor,
-  MantineColor,
   Stack,
   Avatar,
   Title,
   ActionIcon,
-  Space,
 } from "@mantine/core";
 
 import { FaGithub, FaOrcid, FaLinkedin } from "react-icons/fa";
@@ -27,6 +21,7 @@ export interface MemberCardProps {
   page?: string;
   linkedin?: string;
   github: string;
+  role: "discente" | "docente";
 }
 
 export function MemberCard({
@@ -41,7 +36,13 @@ export function MemberCard({
   github,
 }: MemberCardProps) {
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder style={{"justify-content": "space-between"}}>
+    <Card
+      shadow="sm"
+      padding="lg"
+      radius="md"
+      withBorder
+      style={{ "justify-content": "space-between" }}
+    >
       <Card.Section pt={"md"} pl={"lg"}>
         <Stack mr={"md"} align="center">
           <Avatar src={image} radius="xl" size={"xl"} variant="white" />
