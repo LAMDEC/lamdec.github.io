@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, rem, useMantineColorScheme } from "@mantine/core";
+import { Box, Button, Flex, Image, useMantineColorScheme } from "@mantine/core";
 import lamdec from "../public/lamdec.png";
 import ufrj_dark from "../public/ufrj-negativo.png";
 import ufrj_light from "/ufrj.png";
@@ -9,15 +9,8 @@ export function Hero() {
   const { colorScheme } = useMantineColorScheme();
 
   return (
-    <Flex h="92vh">
-      <Box
-        w="65%"
-        // bg="dark.6"
-        // c="gray.2"
-        style={{
-          fontSize: "4rem",
-        }}
-      >
+    <Flex h="92vh" mt="8vh">
+      <Box w="65%" fz="4rem">
         <Flex h="100%" direction="column" justify="center">
           <Box
             ta="center"
@@ -41,17 +34,13 @@ export function Hero() {
           </Flex>
         </Flex>
       </Box>
-      <Box
-        w="35%"
-        // bg="dark.9"
-      >
+      <Box w="35%">
         <Flex
           h="100%"
           direction="column"
           align="center"
           justify="center"
           px="xl"
-          mt={rem(60)}
         >
           <Image w="90%" id="logo" src={lamdec} />
           <Image

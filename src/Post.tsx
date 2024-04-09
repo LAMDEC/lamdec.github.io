@@ -19,7 +19,7 @@ export function Post() {
   return (
     <Content>
       <Flex justify="center">
-        <Box maw="60rem" w="100%" px="sm" py="xl">
+        <Box maw="60rem" w="100%" py="xl">
           <Markdown
             className="markdown"
             remarkPlugins={[remarkFrontmatter, remarkMath, remarkGfm]}

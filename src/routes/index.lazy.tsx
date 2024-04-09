@@ -3,17 +3,18 @@ import { About } from "../About";
 import { Content } from "../Content";
 import { Hero } from "../Hero";
 import { Posts } from "../Posts";
-import { useMediaQuery } from "@mantine/hooks";
+import { useViewportSize } from "@mantine/hooks";
+import { HeroMobile } from "../HeroMobile";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
 });
 
 function Index() {
-  const matches = useMediaQuery('(min-width: 56.25em)');
+  const { width } = useViewportSize();
   return (
     <>
-      {matches && <Hero />}
+      {width < 1000 ? <HeroMobile /> : <Hero />}
       <Content>
         <About />
         <Posts />
@@ -21,4 +22,3 @@ function Index() {
     </>
   );
 }
-
