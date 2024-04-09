@@ -21,8 +21,6 @@ export function Post() {
     ({ name }) => metadata.authors.indexOf(name) !== -1
   );
 
-  console.log(authors);
-
   return (
     <Content>
       <Flex justify="center">
@@ -40,9 +38,9 @@ export function Post() {
               mt="2rem"
             >
               <Flex w="fit-content" wrap="wrap" gap="lg">
-                {authors.map(({ name, image }) => {
+                {authors.map(({ name, image }, i) => {
                   return (
-                    <Flex align="center">
+                    <Flex key={i} align="center">
                       <Avatar src={image} mr="xs" size={44} />
                       <Text>{name}</Text>
                     </Flex>

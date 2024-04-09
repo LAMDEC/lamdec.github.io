@@ -3,14 +3,19 @@
 import "@mantine/core/styles.css";
 
 import { Box, MantineProvider } from "@mantine/core";
-import { RouterProvider, createRouter } from "@tanstack/react-router";
+import {
+  RouterProvider,
+  createHashHistory,
+  createRouter,
+} from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 import { PostsContext, MetadataContext } from "./PostsContext";
 import { useMetadata } from "./hooks/useMetadata";
 import { PostsImport } from "./types/PostImport";
 import { Posts } from "./types/Posts";
 
-const router = createRouter({ routeTree });
+const hashHistory = createHashHistory();
+const router = createRouter({ routeTree, history: hashHistory });
 
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
@@ -19,13 +24,12 @@ declare module "@tanstack/react-router" {
   }
 }
 
-const postsImport: PostsImport = import.meta.glob("../posts/*.md", {
-  query: "?raw",
-  import: "default",
-  eager: true,
-});
-
 export default function App() {
+  const postsImport: PostsImport = import.meta.glob("../posts/*.md", {
+    query: "?raw",
+    import: "default",
+    eager: true,
+  });
   const metadata = useMetadata(postsImport);
 
   const posts: Posts = {};
