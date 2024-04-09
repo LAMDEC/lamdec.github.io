@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Markdown from "react-markdown";
 import remarkFrontmatter from "remark-frontmatter";
-import { ContentContext } from "./PostsContext";
+import { PostsContext } from "./PostsContext";
 import { Route } from "./routes/posts.$postId.lazy";
 import { Box, Flex } from "@mantine/core";
 import "./Post.css";
@@ -12,9 +12,11 @@ import { Content } from "./Content";
 
 export function Post() {
   const { postId } = Route.useParams();
-  const posts = useContext(ContentContext);
+  const posts = useContext(PostsContext);
 
-  const content = posts[`../posts/${postId}.md`];
+  const { content, metadata } = posts[`../posts/${postId}.md`];
+
+  console.log(metadata);
 
   return (
     <Content>

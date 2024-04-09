@@ -8,6 +8,8 @@ export function Posts() {
 
   const metadata = useContext(MetadataContext);
 
+  metadata.sort((a, b) => (a.date < b.date ? 1 : -1));
+
   return (
     <Box>
       <Box

@@ -1,5 +1,5 @@
 import { parse } from "yaml";
-import { PostsImport } from "../types/PostImport";
+import { PostImport } from "../types/PostImport";
 
 function getFrontmatter(markdown: string) {
   const frontmatter = parse(markdown.substring(5, markdown.indexOf("---", 4)));
@@ -9,7 +9,7 @@ function getFrontmatter(markdown: string) {
   return frontmatter;
 }
 
-export function useMetadata(postsImport: PostsImport) {
+export function useMetadata(postsImport: PostImport) {
   const titles = Object.keys(postsImport).map((str) =>
     str.substring(str.indexOf("../posts/") + 9, str.indexOf(".md"))
   );

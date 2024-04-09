@@ -1,6 +1,6 @@
 import { createContext } from "react";
-import { Content } from "./types/Content";
 import { Metadata } from "./types/Metadata";
+import { Posts } from "./types/Posts";
 
 export const MetadataContext = createContext<Metadata[]>([]);
-export const ContentContext = createContext<Content>({});
+export const PostsContext = createContext<Posts>({});

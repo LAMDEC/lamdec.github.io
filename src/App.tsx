@@ -5,9 +5,10 @@ import "@mantine/core/styles.css";
 import { Box, MantineProvider } from "@mantine/core";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
-import { ContentContext, MetadataContext } from "./PostsContext";
+import { PostsContext, MetadataContext } from "./PostsContext";
 import { useMetadata } from "./hooks/useMetadata";
 import { PostsImport } from "./types/PostImport";
+import { Posts } from "./types/Posts";
 
 const router = createRouter({ routeTree });
 
@@ -27,13 +28,19 @@ const postsImport: PostsImport = import.meta.glob("../posts/*.md", {
 export default function App() {
   const metadata = useMetadata(postsImport);
 
+  const posts: Posts = {};
+
+  Object.keys(postsImport).forEach((key, i) => {
+    posts[key] = { metadata: metadata[i], content: postsImport[key] };
+  });
+
   return (
     <MantineProvider>
       <Box ff="Montserrat Variable, sans-serif" style={{ overflowX: "hidden" }}>
         <MetadataContext.Provider value={metadata}>
-          <ContentContext.Provider value={postsImport}>
+          <PostsContext.Provider value={posts}>
             <RouterProvider router={router} />
-          </ContentContext.Provider>
+          </PostsContext.Provider>
         </MetadataContext.Provider>
       </Box>
     </MantineProvider>
