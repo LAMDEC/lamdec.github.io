@@ -1,5 +1,5 @@
 ---
-image: ../posts_imgs/recursao.png
+image: ../recursao.png
 date: 2024-08-13
 tags: [Tag]
 ---
