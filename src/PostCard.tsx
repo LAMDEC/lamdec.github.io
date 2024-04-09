@@ -28,7 +28,7 @@ export function PostCard({ image, title, tags, link, date }: PostCardProps) {
   ));
 
   return (
-    <Card shadow="xs" padding="lg" radius="sm" withBorder h="28rem">
+    <Card shadow="xs" padding="lg" radius="sm" withBorder h="30rem">
       <Card.Section>
         <Link to={link}>
           <Image
@@ -42,15 +42,19 @@ export function PostCard({ image, title, tags, link, date }: PostCardProps) {
           />
         </Link>
       </Card.Section>
-      <Flex mt="md" justify="space-between">
-        <Group>{renderTags}</Group>
+      <Flex direction="column" h="100%" justify="space-between">
+        <Box>
+          <Box mt="md">
+            <Group>{renderTags}</Group>
+          </Box>
+          <Box mt="md">
+            <Text size="xl" c={colorScheme === "dark" ? "white" : "black"}>
+              {title}
+            </Text>
+          </Box>
+        </Box>
         <Text fz="sm">{date}</Text>
       </Flex>
-      <Box mt="md">
-        <Text size="xl" c={colorScheme === "dark" ? "white" : "black"}>
-          {title}
-        </Text>
-      </Box>
     </Card>
   );
 }
