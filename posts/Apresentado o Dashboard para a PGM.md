@@ -1,12 +1,9 @@
 ---
 image: ../posts_imgs/dash.png
 date: 2024-04-02
+authors: [Matheus Vargas, Rafael Schmidt]
 tags: [Projeto, Inteligência Artificial]
 ---
-
-# Apresentando o Dashboard para a PGM
-
-![Imagem](../posts_imgs/dash.png)
 
 Integer sollicitudin arcu nisi, in **vestibulum** felis varius ut. Maecenas urna elit, congue ac mollis ut, ultricies ac odio. _Ut euismod_, risus sit amet maximus dignissim, enim arcu pretium quam, non feugiat mauris erat non magna. Morbi tortor turpis, **pulvinar sit amet elit ut**, luctus fermentum odio. ~~Suspendisse nibh libero, semper at odio sit amet~~, tristique pharetra eros. Aenean sit amet lectus dolor. Cras tincidunt non tellus eget gravida. Vivamus at semper nibh, vel ~elementum ex~.
 
