@@ -1,5 +1,5 @@
 ---
-image: ../dash.png
+image: /dash.png
 date: 2024-04-02
 authors: [Matheus Vargas, Rafael Schmidt]
 tags: [Projeto, Inteligência Artificial]

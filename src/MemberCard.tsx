@@ -45,7 +45,7 @@ export function MemberCard({
     >
       <Card.Section pt={"md"} pl={"lg"}>
         <Stack mr={"md"} align="center">
-          <Avatar src={image} radius="xl" size={"xl"} variant="white" />
+          <Avatar src={image} size={100} variant="white" />
           <Title order={2}>{name}</Title>
           <Text>{institution}</Text>
           {description.map((val) => (
