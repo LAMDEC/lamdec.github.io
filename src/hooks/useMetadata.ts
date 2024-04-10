@@ -6,6 +6,7 @@ function getFrontmatter(markdown: string) {
   // if (frontmatter.date) {
   //   frontmatter.date = new Date(frontmatter.date);
   // }
+  console.log(frontmatter)
   return frontmatter;
 }
 
