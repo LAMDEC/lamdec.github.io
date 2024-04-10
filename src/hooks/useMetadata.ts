@@ -1,10 +1,8 @@
 import { parse } from "yaml";
-import { PostImport } from "../types/PostImport";
+import { PostsImport } from "../types/PostImport";
 
 function getFrontmatter(markdown: string) {
-  console.log(markdown)
-  console.log(markdown.substring(5, markdown.indexOf("---", 4)))
-  const frontmatter = parse(markdown.substring(5, markdown.indexOf("---", 4)));
+  const frontmatter = parse(markdown.substring(4, markdown.indexOf("---", 4)));
   // if (frontmatter.date) {
   //   frontmatter.date = new Date(frontmatter.date);
   // }
@@ -12,7 +10,7 @@ function getFrontmatter(markdown: string) {
   return frontmatter;
 }
 
-export function useMetadata(postsImport: PostImport) {
+export function useMetadata(postsImport: PostsImport) {
   const titles = Object.keys(postsImport).map((str) =>
     str.substring(str.indexOf("../posts/") + 9, str.indexOf(".md"))
   );
