@@ -2,11 +2,13 @@ import { parse } from "yaml";
 import { PostImport } from "../types/PostImport";
 
 function getFrontmatter(markdown: string) {
+  console.log(markdown)
+  console.log(markdown.substring(5, markdown.indexOf("---", 4)))
   const frontmatter = parse(markdown.substring(5, markdown.indexOf("---", 4)));
   // if (frontmatter.date) {
   //   frontmatter.date = new Date(frontmatter.date);
   // }
-  console.log(frontmatter)
+  // console.log(frontmatter)
   return frontmatter;
 }
 
