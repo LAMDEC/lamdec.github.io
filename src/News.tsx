@@ -1,14 +1,11 @@
 import { Box, Divider, SimpleGrid, useMantineColorScheme } from "@mantine/core";
 import { PostCard } from "./PostCard";
-import { MetadataContext } from "./PostsContext";
-import { useContext } from "react";
+import { noticias } from "../public/noticias";
 
-export function Posts() {
+export function News() {
   const { colorScheme } = useMantineColorScheme();
 
-  const metadata = useContext(MetadataContext);
-
-  metadata.sort((a, b) => (a.date < b.date ? 1 : -1));
+  noticias.sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return (
     <Box>
@@ -18,18 +15,19 @@ export function Posts() {
         ff="Oswald Variable, sans-serif"
         c={colorScheme === "dark" ? "white" : "black"}
       >
-        POSTS
+        NOTÍCIAS
       </Box>
       <Divider mt="xs" mb="lg" />
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}>
-        {metadata.map(({ title, date, image, tags }, i) => (
+        {noticias.map(({ title, date, image, site, link }, i) => (
           <PostCard
             key={i}
             title={title}
             date={date}
             image={image}
-            tags={tags}
-            link={"/posts/" + title}
+            tags={[site]}
+            link={link}
+            outgoing
           />
         ))}
       </SimpleGrid>

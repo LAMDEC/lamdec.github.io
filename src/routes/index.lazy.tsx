@@ -5,6 +5,7 @@ import { Hero } from "../Hero";
 import { Posts } from "../Posts";
 import { useViewportSize } from "@mantine/hooks";
 import { HeroMobile } from "../HeroMobile";
+import { News } from "../News";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -18,6 +19,7 @@ function Index() {
       <Content>
         <About />
         <Posts />
+        <News />
       </Content>
     </>
   );

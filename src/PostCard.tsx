@@ -15,10 +15,18 @@ interface PostCardProps {
   title: string;
   tags: string[];
   link: string;
+  outgoing?: boolean;
   date: string;
 }
 
-export function PostCard({ image, title, tags, link, date }: PostCardProps) {
+export function PostCard({
+  image,
+  title,
+  tags,
+  link,
+  date,
+  outgoing = false,
+}: PostCardProps) {
   const { colorScheme } = useMantineColorScheme();
 
   const renderTags = tags.map((tag, i) => (
@@ -30,7 +38,7 @@ export function PostCard({ image, title, tags, link, date }: PostCardProps) {
   return (
     <Card shadow="xs" padding="lg" radius="sm" withBorder h="30rem">
       <Card.Section>
-        <Link to={link}>
+        <Link to={link} target={outgoing ? "_blank" : ""}>
           <Image
             src={
               image
@@ -48,7 +56,11 @@ export function PostCard({ image, title, tags, link, date }: PostCardProps) {
             <Group>{renderTags}</Group>
           </Box>
           <Box mt="md">
-            <Text size="xl" c={colorScheme === "dark" ? "white" : "black"}>
+            <Text
+              lineClamp={2}
+              size="xl"
+              c={colorScheme === "dark" ? "white" : "black"}
+            >
               {title}
             </Text>
           </Box>
