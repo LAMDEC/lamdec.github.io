@@ -23,9 +23,9 @@ export function HeroMobile() {
             <Box id="linha3">à Tomada de Decisão</Box>
           </Box>
           <Flex direction="column" justify="center" align="center">
-            <Image maw="24rem" w="60%" id="logo" src={lamdec} />
+            <Image maw="20rem" w="60%" id="logo" src={lamdec} />
             <Image
-              maw="24rem"
+              maw="20rem"
               w="60%"
               id="logo"
               src={colorScheme == "dark" ? ufrj_dark : ufrj_light}

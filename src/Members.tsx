@@ -8,11 +8,7 @@ export function Members() {
 
   return (
     <Content>
-      <Box
-        fz="2rem"
-        ff="Oswald Variable, sans-serif"
-        c={colorScheme === "dark" ? "white" : "black"}
-      >
+      <Box mt="1rem" fz="2rem" c={colorScheme === "dark" ? "white" : "black"}>
         Docentes
       </Box>
       <Divider mt="xs" mb="lg" />
@@ -36,12 +32,7 @@ export function Members() {
             />
           ))}
       </SimpleGrid>
-      <Box
-        mt="1rem"
-        fz="2rem"
-        ff="Oswald Variable, sans-serif"
-        c={colorScheme === "dark" ? "white" : "black"}
-      >
+      <Box mt="1rem" fz="2rem" c={colorScheme === "dark" ? "white" : "black"}>
         Discentes
       </Box>
       <Divider mt="xs" mb="lg" />

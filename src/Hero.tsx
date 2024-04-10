@@ -9,7 +9,7 @@ export function Hero() {
   const { colorScheme } = useMantineColorScheme();
 
   return (
-    <Flex h="92vh" mt="8vh">
+    <Flex h="92vh" mt="8vh" px="6rem">
       <Box w="65%" fz="4rem">
         <Flex h="100%" direction="column" justify="center">
           <Box
@@ -40,10 +40,11 @@ export function Hero() {
           direction="column"
           align="center"
           justify="center"
-          px="xl"
+          px="sm"
         >
-          <Image w="90%" id="logo" src={lamdec} />
+          <Image maw={440} id="logo" src={lamdec} />
           <Image
+            maw={500}
             id="logo"
             src={colorScheme == "dark" ? ufrj_dark : ufrj_light}
           />

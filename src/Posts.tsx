@@ -12,13 +12,8 @@ export function Posts() {
 
   return (
     <Box>
-      <Box
-        mt="4rem"
-        fz="2rem"
-        ff="Oswald Variable, sans-serif"
-        c={colorScheme === "dark" ? "white" : "black"}
-      >
-        POSTS
+      <Box mt="4rem" fz="2rem" c={colorScheme === "dark" ? "white" : "black"}>
+        Posts
       </Box>
       <Divider mt="xs" mb="lg" />
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}>

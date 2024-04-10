@@ -21,7 +21,7 @@ export const membros: MemberCardProps[] = [
     name: "Marcus L. Nascimento",
     role: "discente",
     image: "https://avatars.githubusercontent.com/u/77112876?v=4",
-    description: ["Pesquisador", "Departamento de Pesquisa"],
+    description: ["Pesquisador Colaborador", "Departamento de Pesquisa"],
     institution: "Fundação José Luiz Egydio Setúbal",
     lattes: "https://lattes.cnpq.br/5803567335277582",
     ORCID: "https://orcid.org/0000-0002-9742-5683",
@@ -61,8 +61,7 @@ export const membros: MemberCardProps[] = [
   {
     name: "Rafael Schmidt",
     role: "discente",
-    image:
-      "https://avatars.githubusercontent.com/u/42819312?v=4",
+    image: "https://avatars.githubusercontent.com/u/42819312?v=4",
     description: ["Graduando em Ciência da Computação"],
     institution: "Universidade Federal do Rio de Janeiro",
     page: "https://www.rafaelschmidt.tech/",

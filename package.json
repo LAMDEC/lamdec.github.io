@@ -12,7 +12,6 @@
   "dependencies": {
     "@fontsource-variable/lora": "^5.0.17",
     "@fontsource-variable/montserrat": "^5.0.18",
-    "@fontsource-variable/oswald": "^5.0.19",
     "@mantine/core": "^7.6.1",
     "@mantine/hooks": "^7.6.1",
     "@tabler/icons-react": "^3.0.0",
