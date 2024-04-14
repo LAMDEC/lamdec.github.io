@@ -9,13 +9,10 @@ export function About() {
       </Box>
       <Divider mt="xs" mb="lg" />
       <Text fz="1.5rem" lh="lg">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe debitis
-        accusamus, voluptas totam cupiditate nostrum culpa ducimus natus velit
-        ad neque placeat aliquid quibusdam, adipisci voluptatibus tempore?
-        Voluptatum iure facilis sit, natus, debitis reprehenderit aliquid
-        dolorum sapiente minus laboriosam consequuntur! Cumque doloremque, eaque
-        nobis cupiditate nam a delectus eos laboriosam!
+      O Laboratório de Métodos de Suporte à Tomada de Decisão (LAMDEC) está caracterizado como Grupo de Pesquisa, Desenvolvimento e Inovação (PD&I) do Instituto de Matemática (IM) da Universidade Federal do Rio de Janeiro (UFRJ). O objetivo principal do LAMDEC é dar suporte à tomada de decisão para gestores - públicos ou privados.
       </Text>
+      <Text fz="1.5rem" lh="lg" mt={"md"}>
+      Atualmente, os membros do LAMDEC são professores do IM-UFRJ, alunos da UFRJ de graduação e de pós-graduação de diversas áreas do conhecimento e pesquisadores doutores recém-formados (pós-docs) vinculados à UFRJ.      </Text>
     </Box>
   );
 }

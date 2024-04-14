@@ -16,11 +16,23 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
+const SobreLazyImport = createFileRoute('/Sobre')()
+const ProjetosLazyImport = createFileRoute('/Projetos')()
 const EquipeLazyImport = createFileRoute('/Equipe')()
 const IndexLazyImport = createFileRoute('/')()
 const PostsPostIdLazyImport = createFileRoute('/posts/$postId')()
 
 // Create/Update Routes
+
+const SobreLazyRoute = SobreLazyImport.update({
+  path: '/Sobre',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/Sobre.lazy').then((d) => d.Route))
+
+const ProjetosLazyRoute = ProjetosLazyImport.update({
+  path: '/Projetos',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/Projetos.lazy').then((d) => d.Route))
 
 const EquipeLazyRoute = EquipeLazyImport.update({
   path: '/Equipe',
@@ -49,6 +61,14 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EquipeLazyImport
       parentRoute: typeof rootRoute
     }
+    '/Projetos': {
+      preLoaderRoute: typeof ProjetosLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/Sobre': {
+      preLoaderRoute: typeof SobreLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/posts/$postId': {
       preLoaderRoute: typeof PostsPostIdLazyImport
       parentRoute: typeof rootRoute
@@ -61,6 +81,8 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren([
   IndexLazyRoute,
   EquipeLazyRoute,
+  ProjetosLazyRoute,
+  SobreLazyRoute,
   PostsPostIdLazyRoute,
 ])
 
