@@ -20,7 +20,7 @@ export interface MemberCardProps {
   ORCID?: string;
   page?: string;
   linkedin?: string;
-  github: string;
+  github?: string;
   role: "discente" | "docente";
 }
 

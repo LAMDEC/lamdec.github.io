@@ -69,4 +69,17 @@ export const membros: MemberCardProps[] = [
     github: "https://github.com/Ralfe15",
     linkedin: "https://www.linkedin.com/in/rafael-schmidt-838075194/",
   },
+  {
+    name: "Wladimir Augusto das Neves",
+    role: "docente",
+    image:
+      "http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4784134T8",
+    lattes: "http://lattes.cnpq.br/2097908108919241",
+    description: [
+      "Professor Associado",
+      "Departamento de Matemática",
+      "Instituto de Matemática",
+    ],
+    institution: "Universidade Federal do Rio de Janeiro",
+  },
 ];
