@@ -9,7 +9,7 @@ export function Members() {
   return (
     <Content>
       <Box mt="1rem" fz="2rem" c={colorScheme === "dark" ? "white" : "black"}>
-        Docentes
+        Coordenadores
       </Box>
       <Divider mt="xs" mb="lg" />
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing={"xl"}>
@@ -33,7 +33,7 @@ export function Members() {
           ))}
       </SimpleGrid>
       <Box mt="1rem" fz="2rem" c={colorScheme === "dark" ? "white" : "black"}>
-        Discentes
+        Equipe
       </Box>
       <Divider mt="xs" mb="lg" />
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing={"xl"}>

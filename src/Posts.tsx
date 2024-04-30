@@ -17,6 +17,7 @@ export function Posts() {
       </Box>
       <Divider mt="xs" mb="lg" />
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}>
+        Ainda não há postagens.
         {metadata.map(({ title, date, image, tags }, i) => (
           <PostCard
             key={i}
