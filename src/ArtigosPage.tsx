@@ -41,7 +41,7 @@ export function ArtigosPage() {
         </List.Item>
         <List.Item>
           Gomes, A., Neves, W. (2024). The Hele-Shaw free boundary limit of
-          Buckley-Leverett System.
+          Buckley-Leverett System. Preprint.
           <Anchor
             href="https://arxiv.org/abs/2404.09781"
             target="_blank"
