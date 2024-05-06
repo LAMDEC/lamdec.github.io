@@ -51,7 +51,7 @@ export const membros: MemberCardProps[] = [
     name: "Matheus Vargas",
     role: "discente",
     image:
-      "https://media.licdn.com/dms/image/D4D03AQFZDR4IwxTUOQ/profile-displayphoto-shrink_800_800/0/1712335929671?e=1717632000&v=beta&t=xTmQf1hQnwqjmnUTzwPvGQUXBerJUVlpIoBNmSjW4lo",
+      "http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K1190780Y5",
     description: ["Graduando em Ciência da Computação"],
     institution: "Universidade Federal do Rio de Janeiro",
     lattes: "https://lattes.cnpq.br/4974056898006345",
