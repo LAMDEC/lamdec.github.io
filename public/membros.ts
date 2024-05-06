@@ -21,7 +21,7 @@ export const membros: MemberCardProps[] = [
     name: "Marcus L. Nascimento",
     role: "discente",
     image: "https://avatars.githubusercontent.com/u/77112876?v=4",
-    description: ["Pesquisador Colaborador", "Departamento de Pesquisa"],
+    description: ["Pesquisador", "Departamento de Pesquisa"],
     institution: "Fundação José Luiz Egydio Setúbal",
     lattes: "https://lattes.cnpq.br/5803567335277582",
     ORCID: "https://orcid.org/0000-0002-9742-5683",
