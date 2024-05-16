@@ -82,4 +82,14 @@ export const membros: MemberCardProps[] = [
     ],
     institution: "Universidade Federal do Rio de Janeiro",
   },
+  {
+    name: "Pedro Saito",
+    role: "discente",
+    image: "http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K1133521Z9",
+    description: ["Graduando em Ciência da Computação"],
+    institution: "Universidade Federal do Rio de Janeiro",
+    lattes: "http://lattes.cnpq.br/1584609256466864",
+    github: "https://github.com/saitoi",
+    linkedin: "https://www.linkedin.com/in/pedro-saito-419a08247/"
+  },
 ];
