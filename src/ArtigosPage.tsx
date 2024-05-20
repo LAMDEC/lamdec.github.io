@@ -50,6 +50,11 @@ export function ArtigosPage() {
             [Link]
           </Anchor>
         </List.Item>
+        <List.Item>
+          Nascimento, M. L., Barreto, L. M. Improving crime count forecasts in
+          the city of Rio de Janeiro via reconciliation. Security Journal (to
+          appear)
+        </List.Item>
       </List>
     </Content>
   );
