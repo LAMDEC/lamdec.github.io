@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Image, useMantineColorScheme } from "@mantine/core";
 import lamdec from "../public/lamdec.png";
+import lamdec_dark_mode from "../public/lamdec_claro.png";
 import ufrj_dark from "../public/ufrj-negativo.png";
 import ufrj_light from "/ufrj.png";
 import { MdOutlineArrowDownward } from "react-icons/md";
@@ -42,7 +43,11 @@ export function Hero() {
           justify="center"
           px="sm"
         >
-          <Image maw={440} id="logo" src={lamdec} />
+          <Image
+            maw={360}
+            id="logo"
+            src={colorScheme == "dark" ? lamdec_dark_mode : lamdec}
+          />
           <Image
             maw={500}
             id="logo"
