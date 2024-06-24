@@ -1,5 +1,6 @@
 import { Box, Flex, Image, useMantineColorScheme } from "@mantine/core";
 import lamdec from "../public/lamdec.png";
+import lamdec_dark_mode from "../public/lamdec_escuro.png";
 import ufrj_dark from "../public/ufrj-negativo.png";
 import ufrj_light from "/ufrj.png";
 import "./Hero.css";
@@ -23,11 +24,14 @@ export function HeroMobile() {
             <Box id="linha3">à Tomada de Decisão</Box>
           </Box>
           <Flex direction="column" justify="center" align="center">
-            <Image maw="20rem" w="60%" id="logo" src={lamdec} />
             <Image
               maw="20rem"
               w="60%"
-              id="logo"
+              src={colorScheme === "dark" ? lamdec_dark_mode : lamdec}
+            />
+            <Image
+              maw="20rem"
+              w="60%"
               src={colorScheme == "dark" ? ufrj_dark : ufrj_light}
             />
           </Flex>
