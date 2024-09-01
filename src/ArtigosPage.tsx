@@ -40,6 +40,18 @@ export function ArtigosPage() {
           </Anchor>
         </List.Item>
         <List.Item>
+          Arroyo, A. H., Silva, R. S., Migon, H. S. (2023). Bayesian Quantile
+          Stochastic Frontier Models. Journal of Econometrics and Statistics,
+          Vol. 3, Nº 2, 157-184.
+          <Anchor
+            href="https://www.arfjournals.com/image/catalog/Journals%20Papers/JES%20/2023/No%202%20(2023)/Article_4.pdf"
+            target="_blank"
+            ml={"xs"}
+          >
+            [Link]
+          </Anchor>
+        </List.Item>
+        <List.Item>
           Gomes, A., Neves, W. (2024). The Hele-Shaw free boundary limit of
           Buckley-Leverett System. Preprint.
           <Anchor
