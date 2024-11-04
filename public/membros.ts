@@ -92,4 +92,15 @@ export const membros: MemberCardProps[] = [
     github: "https://github.com/saitoi",
     linkedin: "https://www.linkedin.com/in/pedro-saito-419a08247/"
   },
+  {
+    name: "Althayr S. Nazaret",
+    role: "discente",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGvSrRXloDUYg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695064157630?e=1736380800&v=beta&t=Rg1pqU7PC0W52XxyLTwJJM16iCyjgbJKkfDBCPnCmks",
+    description: ["Cientista de Dados"],
+    institution: "Zippia Inc.",
+    lattes: "http://lattes.cnpq.br/5216544600268360",
+    github: "https://github.com/althayr",
+    linkedin: "https://www.linkedin.com/in/althayr-santos",
+    page: "https://althayr.github.io/"
+  }
 ];
