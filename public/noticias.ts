@@ -10,4 +10,11 @@ export const noticias: Noticia[] = [
     date: "2023-04-14",
     site: "Conexão UFRJ",
   },
+  {
+    title: "LIVE: Inteligência Artificial aplicada à Dívida Ativa da PGM-Rio",
+    link: "https://www.youtube.com/watch?v=11-C-mKy1wQ",
+    image: "https://i3.ytimg.com/vi/11-C-mKy1wQ/maxresdefault.jpg",
+    date: "2024-10-24",
+    site: "Youtube"
+  }
 ];
