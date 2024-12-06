@@ -29,7 +29,7 @@ export function Hero() {
             <Button size="xl" rightSection={<MdOutlineArrowDownward />}>
               Posts
             </Button>
-            <Button variant="outline" size="xl">
+            <Button variant="outline" size="xl" component="a" href="/#/contato">
               Contato
             </Button>
           </Flex>

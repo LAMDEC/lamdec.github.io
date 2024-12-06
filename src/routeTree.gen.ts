@@ -19,6 +19,7 @@ import { Route as rootRoute } from './routes/__root'
 const SobreLazyImport = createFileRoute('/Sobre')()
 const ProjetosLazyImport = createFileRoute('/Projetos')()
 const EquipeLazyImport = createFileRoute('/Equipe')()
+const ContatoLazyImport = createFileRoute('/Contato')()
 const ArtigosLazyImport = createFileRoute('/Artigos')()
 const IndexLazyImport = createFileRoute('/')()
 const PostsPostIdLazyImport = createFileRoute('/posts/$postId')()
@@ -39,6 +40,11 @@ const EquipeLazyRoute = EquipeLazyImport.update({
   path: '/Equipe',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/Equipe.lazy').then((d) => d.Route))
+
+const ContatoLazyRoute = ContatoLazyImport.update({
+  path: '/Contato',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/Contato.lazy').then((d) => d.Route))
 
 const ArtigosLazyRoute = ArtigosLazyImport.update({
   path: '/Artigos',
@@ -67,6 +73,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArtigosLazyImport
       parentRoute: typeof rootRoute
     }
+    '/Contato': {
+      preLoaderRoute: typeof ContatoLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/Equipe': {
       preLoaderRoute: typeof EquipeLazyImport
       parentRoute: typeof rootRoute
@@ -77,6 +87,10 @@ declare module '@tanstack/react-router' {
     }
     '/Sobre': {
       preLoaderRoute: typeof SobreLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/Contato': {
+      preLoaderRoute: typeof ContatoLazyImport
       parentRoute: typeof rootRoute
     }
     '/posts/$postId': {
@@ -91,6 +105,7 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren([
   IndexLazyRoute,
   ArtigosLazyRoute,
+  ContatoLazyRoute,
   EquipeLazyRoute,
   ProjetosLazyRoute,
   SobreLazyRoute,

@@ -17,6 +17,7 @@ const links = [
   { link: "/projetos", label: "Projetos" },
   { link: "/artigos", label: "Artigos" },
   { link: "/sobre", label: "Sobre" },
+  { link: "/contato", label: "Contato" },
 ];
 
 export function Header() {
