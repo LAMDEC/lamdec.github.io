@@ -113,7 +113,7 @@ export function ArtigosPage() {
         Artigos
       </Box>
       <Divider mt="xs" mb="lg" />
-      <List fz="1.3rem" lh={"lg"} withPadding>
+      <List fz="1.3rem" lh={"lg"} withPadding spacing={"md"}>
       {artigos.map((artigo, index) => (
           <Artigo key={index} {...artigo} />
         ))}
