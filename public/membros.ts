@@ -76,7 +76,7 @@ export const membros: MemberCardProps[] = [
       "http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4784134T8",
     lattes: "http://lattes.cnpq.br/2097908108919241",
     description: [
-      "Professor Associado",
+      "Professor Titular",
       "Departamento de Matemática",
       "Instituto de Matemática",
     ],
@@ -93,9 +93,29 @@ export const membros: MemberCardProps[] = [
     linkedin: "https://www.linkedin.com/in/pedro-saito-419a08247/"
   },
   {
+    name: "Leon Martins Uchoa Barboza",
+    role: "discente",
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQH0Lqv0ywsVYw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1668286384162?e=1743638400&v=beta&t=MLZ1AkUrViHCEDXX4MH_LRyal6X6wDSZIvpz404pszg",
+    description: ["Graduando em Matemática Aplicada"],
+    institution: "Universidade Federal do Rio de Janeiro",
+    lattes: "http://lattes.cnpq.br/0365374413648970",
+    github: "https://github.com/LMBarboza",
+    linkedin: "https://www.linkedin.com/in/leon-barboza-47a315256/"
+  },
+  {
+    name: "João Pedro Silva de Sousa",
+    role: "discente",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQG_er_6FSr1WA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725498967114?e=1743638400&v=beta&t=aJOAmqrecRTnZbOT8nKbc8b6_al4i9UaE_dqbR3APQk",
+    description: ["Graduando em Ciência da Computação"],
+    institution: "Universidade Federal do Rio de Janeiro",
+    lattes: "http://lattes.cnpq.br/6972346112102776",
+    github: "https://github.com/djonpietro",
+    linkedin: "https://www.linkedin.com/in/joão-pedro-silva-de-sousa-00689824b/"
+  },
+  {
     name: "Althayr S. Nazaret",
     role: "discente",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGvSrRXloDUYg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695064157630?e=1736380800&v=beta&t=Rg1pqU7PC0W52XxyLTwJJM16iCyjgbJKkfDBCPnCmks",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGvSrRXloDUYg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695064157630?e=1743638400&v=beta&t=v4X2sBgqUwPjDQkxxfNCRdLKzmbzGScVwyU9MxvZIr4",
     description: ["Cientista de Dados"],
     institution: "Zippia Inc.",
     lattes: "http://lattes.cnpq.br/5216544600268360",

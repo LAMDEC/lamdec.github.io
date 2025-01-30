@@ -17,27 +17,30 @@ interface ArtigoProps {
   boldAuthorIndex: number;
 }
 
-function Artigo({ title, authors, details, year, href, boldAuthorIndex }: ArtigoProps) {
+function Artigo({
+  title,
+  authors,
+  details,
+  year,
+  href,
+  boldAuthorIndex,
+}: ArtigoProps) {
   const authorElements = authors.map((author, index) => (
     <React.Fragment key={index}>
       {index > 0 && ", "}
-      {index === boldAuthorIndex ? (
-        <b>{author}</b>
-      ) : (
-        author
-      )}
+      {index === boldAuthorIndex ? <b>{author}</b> : author}
     </React.Fragment>
   ));
 
   return (
     <List.Item>
-    {authorElements} {year ? `(${year}).` : ""} {title} {details}
-    {href && (
-      <Anchor href={href} target="_blank" ml={"xs"}>
-        [Link]
-      </Anchor>
-    )}
-  </List.Item>
+      {authorElements} {year ? `(${year}).` : ""} {title} {details}
+      {href && (
+        <Anchor href={href} target="_blank" ml={"xs"}>
+          [Link]
+        </Anchor>
+      )}
+    </List.Item>
   );
 }
 
@@ -49,8 +52,7 @@ export function ArtigosPage() {
       authors: ["Cunha, I. C.", "Silva, R. S."],
       title:
         "Particle Filters and Adaptive Metropolis-Hastings Sampling Applied to Volatitlity Models.",
-      details:
-        "Journal of Econometrics and Statistics, Vol. 5, Nº 1, 89-106.",
+      details: "Journal of Econometrics and Statistics, Vol. 5, Nº 1, 89-106.",
       year: "2025",
       href: "https://drive.google.com/file/d/15zTnEaucnHJj9po3TDx1P5AftAsTO4Sb/view?usp=sharing",
       boldAuthorIndex: 1,
@@ -58,9 +60,8 @@ export function ArtigosPage() {
     {
       authors: ["Oliveira, L. M.", "Ramos, F. A. T.", "Silva, R. S."],
       title: "Stochastic Volatility Model via Gaussian Process.",
-      details:
-        "Journal of Econometrics and Statistics, Vol. 5, Nº 1, 1-13.",
-        year: "2025",
+      details: "Journal of Econometrics and Statistics, Vol. 5, Nº 1, 1-13.",
+      year: "2025",
       href: "https://drive.google.com/file/d/1sg6OGJaAVqKdmPuqhWFjm6qgtw73XrsO/view?usp=sharing",
       boldAuthorIndex: 2,
     },
@@ -75,8 +76,7 @@ export function ArtigosPage() {
     {
       authors: ["Arroyo, A. H.", "Silva, R. S.", "Migon, H. S."],
       title: "Bayesian Quantile Stochastic Frontier Models.",
-      details:
-        "Journal of Econometrics and Statistics, Vol. 3, Nº 2, 157-184.",
+      details: "Journal of Econometrics and Statistics, Vol. 3, Nº 2, 157-184.",
       href: "https://drive.google.com/file/d/19cnn3m-xO9R3li-9EAB9hRVkUKfrfz9Z/view?usp=sharing",
       year: "2023",
       boldAuthorIndex: 1,
@@ -114,9 +114,18 @@ export function ArtigosPage() {
       </Box>
       <Divider mt="xs" mb="lg" />
       <List fz="1.3rem" lh={"lg"} withPadding spacing={"md"}>
-      {artigos.map((artigo, index) => (
+        {artigos.map((artigo, index) => (
           <Artigo key={index} {...artigo} />
         ))}
+      </List>
+      <Box mt="1rem" fz="2rem" c={colorScheme === "dark" ? "white" : "black"}>
+        Apresentação de Trabalhos
+      </Box>
+      <Divider mt="xs" mb="lg" />
+      <List fz="1.3rem" lh={"lg"} withPadding spacing={"md"}>
+        <List.Item>
+          Matheus Vargas e Rafael Schmidt - XLV JICTAC - Apresentação de Resultados da Modelagem dos Devedores do Município do Rio de Janeiro via Dashboard. <Anchor target="_blank" href="public/apresentacoes/mateus-rafael-XLVJICTAC/eposter.png">[Link]</Anchor><Anchor target="_blank" href="public/apresentacoes/mateus-rafael-XLVJICTAC/certificado.pdf">[Certificado]</Anchor>
+        </List.Item>
       </List>
     </Content>
   );

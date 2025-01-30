@@ -89,10 +89,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SobreLazyImport
       parentRoute: typeof rootRoute
     }
-    '/Contato': {
-      preLoaderRoute: typeof ContatoLazyImport
-      parentRoute: typeof rootRoute
-    }
     '/posts/$postId': {
       preLoaderRoute: typeof PostsPostIdLazyImport
       parentRoute: typeof rootRoute
