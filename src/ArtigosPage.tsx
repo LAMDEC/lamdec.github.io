@@ -49,6 +49,13 @@ export function ArtigosPage() {
 
   const artigos: ArtigoProps[] = [
     {
+      authors: ["Chou, H.-H.", "Maly, J.", "Verdun, C. M.", "Costa, B. F. P.", "Mirandola, H."],
+      title: "Get rid of your constraints and reparametrize: A study in NNLS and implicit bias.",
+      details: "AISTATS 2025 (to appear)",
+      year: "2025",
+      boldAuthorIndex: 4,
+    },
+    {
       authors: ["Cunha, I. C.", "Silva, R. S."],
       title:
         "Particle Filters and Adaptive Metropolis-Hastings Sampling Applied to Volatitlity Models.",
@@ -64,6 +71,14 @@ export function ArtigosPage() {
       year: "2025",
       href: "https://drive.google.com/file/d/1sg6OGJaAVqKdmPuqhWFjm6qgtw73XrsO/view?usp=sharing",
       boldAuthorIndex: 2,
+    },
+    {
+      authors: ["Nascimento, M. L.", "Barreto, L. M."],
+      title: "Improving crime count forecasts in the city of Rio de Janeiro via reconciliation.",
+      year: "2024",
+      details: "Security Journal, Vol. 37, 1597-1618.",
+      href: "https://doi.org/10.1057/s41284-024-00433-5",
+      boldAuthorIndex: 0,
     },
     {
       authors: ["Gomes, A.", "Neves, W."],
@@ -98,13 +113,6 @@ export function ArtigosPage() {
       year: "2013",
       boldAuthorIndex: 1,
     },
-    {
-      authors: ["Nascimento, M. L.", "Barreto, L. M."],
-      title:
-        "Improving crime count forecasts in the city of Rio de Janeiro via reconciliation.",
-      details: "Security Journal (to appear).",
-      boldAuthorIndex: 0,
-    },
   ];
 
   return (
@@ -130,10 +138,16 @@ export function ArtigosPage() {
           Matheus Vargas e Rafael Schmidt - 13ª SIAC - Apresentação de Resultados da Modelagem dos Devedores do Município do Rio de Janeiro via Dashboard. <Anchor target="_blank" href="https://drive.google.com/file/d/1wblxR3UwLtPrmQj7ADkZMg85eFMpeVes/view?usp=drive_link">[Certificado Menção Honrosa]</Anchor>
         </List.Item>
         <List.Item>
+          Leon Martins Uchoa Barboza- 13ª SIAC - Aplicação Da Análise De Sobrevivência Para Previsão De Quitação De Créditos Em Dívida Ativa. <Anchor target="_blank" href="https://drive.google.com/file/d/1DRDPDXofhFE4ZI2xvq30halo5q6gyC2E/view?usp=drive_link">[Certificado]</Anchor>
+        </List.Item>
+        <List.Item>
           Matheus Vargas e Rafael Schmidt - XLV JICTAC - Apresentação de Resultados da Modelagem dos Devedores do Município do Rio de Janeiro via Dashboard. <Anchor target="_blank" href="https://drive.google.com/file/d/15Ku6KBH7c6KZcL6OIM2LmsPlFJOSS-qf/view?usp=drive_link">[Link]</Anchor><Anchor target="_blank" href="https://drive.google.com/file/d/1QknnYo26qtsCuUWuKcm76i1mBkb5ieP-/view?usp=drive_link">[Certificado]</Anchor>
         </List.Item>
         <List.Item>
           Paulo Silva Filho - XLV JICTAC - Otimização de Performance em Bancos de Dados: Eficiência e Análise em Ambientes Relacionais. <Anchor target="_blank" href="https://drive.google.com/file/d/1WWNX5NWuJwGf4M-Wn5bC1cnNjDwoAhSp/view?usp=drive_link">[Link]</Anchor><Anchor target="_blank" href="https://drive.google.com/file/d/1y1HpbbeX6pTOiXoAtxYmIZ8cml0MrL86/view?usp=drive_link">[Certificado Menção Honrosa]</Anchor>
+        </List.Item>
+        <List.Item>
+          Leon Martins Uchoa Barboza- XLV JICTAC - Classificação E Ordenação De Devedores Quanto À Probabilidade De Pagamento Da Dívida. <Anchor target="_blank" href="https://drive.google.com/file/d/1DtLs1L_j0ZODNpLXm1r4j8jjxclqa_8a/view?usp=drive_link">[Certificado]</Anchor>
         </List.Item>
       </List>
     </Content>
