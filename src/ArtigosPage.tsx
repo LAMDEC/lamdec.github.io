@@ -124,7 +124,16 @@ export function ArtigosPage() {
       <Divider mt="xs" mb="lg" />
       <List fz="1.3rem" lh={"lg"} withPadding spacing={"md"}>
         <List.Item>
-          Matheus Vargas e Rafael Schmidt - XLV JICTAC - Apresentação de Resultados da Modelagem dos Devedores do Município do Rio de Janeiro via Dashboard. <Anchor target="_blank" href="public/apresentacoes/mateus-rafael-XLVJICTAC/eposter.png">[Link]</Anchor><Anchor target="_blank" href="public/apresentacoes/mateus-rafael-XLVJICTAC/certificado.pdf">[Certificado]</Anchor>
+          Pedro Henrique Honorio Saito - 13ª SIAC - Otimização de Performance em Bancos de Dados: Eficiência e Análise em Ambientes Relacionais. <Anchor target="_blank" href="https://drive.google.com/file/d/1mWK84madhURTvbNIqAA9ylGMDGG4Neeg/view?usp=drive_link">[Link]</Anchor><Anchor target="_blank" href="https://drive.google.com/file/d/1v0VChhazyQeTdg0XBQKJH55Mrm2qVzek/view?usp=drive_link">[Certificado]</Anchor>
+        </List.Item>
+        <List.Item>
+          Matheus Vargas e Rafael Schmidt - 13ª SIAC - Apresentação de Resultados da Modelagem dos Devedores do Município do Rio de Janeiro via Dashboard. <Anchor target="_blank" href="https://drive.google.com/file/d/1wblxR3UwLtPrmQj7ADkZMg85eFMpeVes/view?usp=drive_link">[Certificado Menção Honrosa]</Anchor>
+        </List.Item>
+        <List.Item>
+          Matheus Vargas e Rafael Schmidt - XLV JICTAC - Apresentação de Resultados da Modelagem dos Devedores do Município do Rio de Janeiro via Dashboard. <Anchor target="_blank" href="https://drive.google.com/file/d/15Ku6KBH7c6KZcL6OIM2LmsPlFJOSS-qf/view?usp=drive_link">[Link]</Anchor><Anchor target="_blank" href="https://drive.google.com/file/d/1QknnYo26qtsCuUWuKcm76i1mBkb5ieP-/view?usp=drive_link">[Certificado]</Anchor>
+        </List.Item>
+        <List.Item>
+          Paulo Silva Filho - XLV JICTAC - Otimização de Performance em Bancos de Dados: Eficiência e Análise em Ambientes Relacionais. <Anchor target="_blank" href="https://drive.google.com/file/d/1WWNX5NWuJwGf4M-Wn5bC1cnNjDwoAhSp/view?usp=drive_link">[Link]</Anchor><Anchor target="_blank" href="https://drive.google.com/file/d/1y1HpbbeX6pTOiXoAtxYmIZ8cml0MrL86/view?usp=drive_link">[Certificado Menção Honrosa]</Anchor>
         </List.Item>
       </List>
     </Content>
