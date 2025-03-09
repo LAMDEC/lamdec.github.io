@@ -3,7 +3,6 @@ import {
   AppShell,
   Text,
   Title,
-  Divider,
   Accordion,
   ScrollArea,
   Button,
@@ -11,8 +10,6 @@ import {
   List,
   Paper,
   Container,
-  rem,
-  Anchor,
   Badge,
   Box,
   useMantineColorScheme,
@@ -365,9 +362,13 @@ export const SeminariosPage: React.FC = () => {
               Graduate Seminar: Understanding Large Language Models (Theoretical
               Focus)
             </Title>
+            <Title order={3} mb="md">
+              The seminars will be held every Wednesday at 4 p.m.{" "}
+            </Title>
             <Title order={2} mb="md">
               Course Overview
             </Title>
+
             <Paper p="md" withBorder>
               <Text>{courseInfo.description}</Text>
             </Paper>
