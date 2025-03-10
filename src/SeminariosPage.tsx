@@ -362,15 +362,18 @@ export const SeminariosPage: React.FC = () => {
               Graduate Seminar: Understanding Large Language Models (Theoretical
               Focus)
             </Title>
-            <Title order={3} mb="md">
-              The seminars will be held every Wednesday at 4 p.m.{" "}
-            </Title>
             <Title order={2} mb="md">
               Course Overview
             </Title>
 
-            <Paper p="md" withBorder>
+            <Paper p="md" withBorder mb="md">
               <Text>{courseInfo.description}</Text>
+            </Paper>
+            <Title order={2} mb="md">
+              Location
+            </Title>
+            <Paper p="md" withBorder >
+              <Text>The seminars will be held every Wednesday at 4 p.m. in LIG-I, Ligação ABC do CT, at UFRJ.</Text>
             </Paper>
           </Container>
         );
